@@ -55,7 +55,7 @@
     "lodash": "^4.16.4",
     "protractor": "~5.1.1",
     "rimraf": "^2.5.4",
-    "tslint": "^5.0.0",
+    "tslint": "^5.3.2",
     "typescript": "^2.0.0",
     "core-js": "^2.4.1",
     "rxjs": "5.0.1",

@@ -57,7 +57,7 @@
     "protractor": "~5.1.1",
     "rimraf": "^2.5.4",
     "tslint": "^5.0.0",
-    "typescript": "^2.0.0",
+    "typescript": "^2.3.4",
     "core-js": "^2.4.1",
     "rxjs": "5.0.1",
     "zone.js": "^0.8.4",

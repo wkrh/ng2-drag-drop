@@ -1,0 +1,36 @@
+<div class="card card-outline-primary" droppable [dragOverClass]="'drag-target-border'" [dropScope]="'fruit'"
+     [dragHintClass]="'drag-hint'"
+     (onDrop)="onFruitDrop($event)" [dropEnabled]="fruitDropEnabled">
+    <div class="card-header card-inverse card-primary">
+        Drop Fruits here
+    </div>
+    <div class="card-block scroll-list">
+        <li *ngFor="let item of droppedFruits" class="list-group-item">{{item.name}}</li>
+    </div>
+
+    <div class="card-footer">
+        <div class="form-check">
+            <label class="form-check-label">
+                <input class="form-check-input" type="checkbox" value="" [(ngModel)]="fruitDropEnabled">
+                Drop Enabled
+            </label>
+        </div>
+    </div>
+
+
+</div>
+<div class="card card-outline-primary" droppable [dragOverClass]="'drag-target-border-green'" [dropScope]="'vegetable'"
+     [dragHintClass]="'drag-hint'" (onDrop)="onVegetableDrop($event)">
+    <div class="card-header card-inverse card-primary">Drop Vegetables here</div>
+    <div class="card-block scroll-list">
+        <li *ngFor="let item of droppedVegetables" class="list-group-item">{{item.name}}</li>
+    </div>
+</div>
+<div class="card card-outline-primary" droppable [dragOverClass]="'drag-target-border'"
+     [dropScope]="['fruit', 'vegetable']"
+     [dragHintClass]="'drag-hint'" (onDrop)="onAnyDrop($event)">
+    <div class="card-header card-inverse card-primary">Drop Anything here</div>
+    <div class="card-block scroll-list">
+        <li *ngFor="let item of droppedItems" class="list-group-item">{{item.name}}</li>
+    </div>
+</div>

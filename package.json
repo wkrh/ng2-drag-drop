@@ -32,7 +32,7 @@
   },
   "homepage": "https://github.com/ObaidUrRehman/ng2-drag-drop#readme",
   "peerDependencies": {
-    "@angular/common": "^4.0.0 || ^2.0.0",
+    "@angular/common": "^4.2.5",
     "@angular/core": "^4.0.0 || ^2.0.0"
   },
   "devDependencies": {

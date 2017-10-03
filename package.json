@@ -1,6 +1,6 @@
 {
   "name": "ng2-drag-drop",
-  "version": "2.0.1",
+  "version": "2.9.2",
   "description": "Drag & Drop for Angular2 and beyond - based on HTML5 with no external dependencies.",
   "main": "index.js",
   "typings": "index.d.ts",
@@ -10,8 +10,9 @@
     "start": "tsc -w",
     "transpile": "ngc",
     "build": "npm run transpile",
-    "prepublish": "npm run build",
-    "lint": "tslint ./src/**/*.ts -t verbose"
+    "prepublishOnly": "npm run build",
+    "lint": "tslint ./src/**/*.ts -t verbose",
+    "dev": "concurrently \"npm start\" \"cd demo && npm start\""
   },
   "repository": {
     "type": "git",
@@ -59,7 +60,7 @@
     "tslint": "^5.0.0",
     "typescript": "^2.0.0",
     "core-js": "^2.4.1",
-    "rxjs": "5.0.1",
+    "rxjs": "5.4.3",
     "zone.js": "^0.8.4",
     "@types/core-js": "0.9.35"
   }

@@ -47,7 +47,7 @@ export class Draggable implements OnInit {
     /**
      * The url to image that will be used as custom drag image when the draggable is being dragged.
      */
-    @Input() set dragImage( value: string) {
+    @Input() set dragImage(value: string) {
         this._dragImage = value;
         this.dragImageElement = new Image();
         this.dragImageElement.src = this.dragImage;
@@ -154,6 +154,7 @@ export class Draggable implements OnInit {
         this.onDragEnd.emit(e);
         e.stopPropagation();
         e.preventDefault();
+        this.ng2DragDropService.dragData = this.ng2DragDropService.scope = undefined;
     }
 
     @HostListener('mouseover', ['$event'])

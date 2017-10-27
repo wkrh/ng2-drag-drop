@@ -154,6 +154,8 @@ export class Draggable implements OnInit, OnDestroy {
                 e.dataTransfer.setDragImage(this.dragImageElement, 0, 0);
             }
 
+            e.dataTransfer.effectAllowed = this.dragEffect;
+
             e.stopPropagation();
             this.onDragStart.emit(e);
             this.ng2DragDropService.onDragStart.next();
